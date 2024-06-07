@@ -1,0 +1,70 @@
+{
+    "name": "AikouTicket",
+    "version": "0.16.0",
+    "description": "A simple AikouTicket bot for discord",
+    "type": "module",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "npm run build && node dist/index.js",
+        "build": "tsc --project tsconfig.json",
+        "prisma:push": "npx prisma db push",
+        "prisma:migrate": "npx prisma migrate dev --name init",
+        "clean:windows": "rmdir /s /q dist",
+        "clean:linux": "rm -rf dist",
+        "lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
+        "format": "biome check --apply-unsafe ./src"
+    },
+    "lint-staged": {
+        "*.ts": [
+            "biome check --apply",
+            "biome format --write"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dawgcodes/discord-ticket-bot.git"
+    },
+    "bugs": {
+        "url": "https://github.com/dawgcodes/discord-ticket-botissues"
+    },
+    "homepage": "https://github.com/dawgcodes/discord-ticket-bot#readme",
+    "devDependencies": {
+        "@biomejs/biome": "^1.8.0",
+        "@types/node": "^20.14.2",
+        "@types/signale": "^1.4.7",
+        "@typescript-eslint/eslint-plugin": "^7.12.0",
+        "@typescript-eslint/parser": "^7.12.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-unicorn": "^53.0.0",
+        "prisma": "^5.15.0",
+        "ts-node": "^10.9.2"
+    },
+    "keywords": [
+        "discord",
+        "bot",
+        "support",
+        "tickets",
+        "typescript"
+    ],
+    "author": "LucasB25",
+    "license": "GPL-3.0",
+    "signale": {
+        "displayScope": true,
+        "displayBadge": true,
+        "displayDate": true,
+        "displayFilename": true,
+        "displayLabel": true,
+        "displayTimestamp": true,
+        "underlineLabel": true
+    },
+    "dependencies": {
+        "@prisma/client": "^5.15.0",
+        "discord-html-transcripts": "^3.2.0",
+        "discord.js": "^14.15.3",
+        "dotenv": "^16.4.5",
+        "path": "^0.12.7",
+        "signale": "^1.4.0",
+        "yaml": "^2.4.3"
+    }
+}
