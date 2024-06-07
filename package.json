@@ -1,7 +1,7 @@
 {
-    "name": "AikouTicket",
+    "name": "discord-ticket-bot",
     "version": "0.16.0",
-    "description": "A simple AikouTicket bot for discord",
+    "description": "A simple discord-ticket-bot bot for discord",
     "type": "module",
     "main": "dist/index.js",
     "scripts": {
