@@ -1,0 +1,92 @@
+# ==============================================
+# Ticket Bot General Settings
+# ==============================================
+
+maxActiveTicketsPerUser: 1  # Maximum number of active tickets allowed per user
+menuPlaceholder: 'Select a category to open a ticket.'  # Placeholder text for the select menu
+
+# Roles with access to ticket channels
+supportRoles:
+    - '1195413803295309926'  # Support role ID 1
+    - '1247796136668823633'  # Support role ID 2
+
+closeTicketStaffOnly: false  # Allow only staff members with specified roles to close tickets
+
+logChannelId: '1248766674585260043'  # ID of the channel where ticket logs will be sent
+transcriptLogsChannelId: '1248766674585260043'  # ID of the channel where ticket transcript logs will be sent
+ticketCategoryId: '1195397286390415380'  # ID of the category under which ticket channels will be created
+enableTranscripts: true  # Enable or disable the creation and sending of ticket transcripts
+enableClaimButton: true  # Enable or disable the claim button for tickets
+enableTicketReason: true  # Enable or disable the requirement for a reason when closing tickets
+notifyTicketCreator: true # Enable or disable notifying the ticket creator when a ticket is closed
+
+# ================================
+# Ticket Category Settings
+# ================================
+# Define different categories of tickets here.
+# Each category should have a unique identifier.
+# Note: The Discord limit is 25 select menu options, but it's not advisable to use that many.
+# Each type consumes 2 categories, and Discord's maximum is 50. 
+# Using too many types could exhaust your category options for regular Discord channels.
+
+ticketCategories:
+    # Category 1
+    category1:
+        # Label displayed in the select menu
+        menuLabel: 'Partner'
+        # Description explaining the purpose of this category
+        menuDescription: 'Click on this option to open a Partner Ticket'
+        # Emoji associated with this category (leave empty if none)
+        menuEmoji: '😀'
+
+        # ================================
+        # Embed description for this category
+        embedDescription: 'Welcome to Partner! You have a partner request'
+
+    # Category 2
+    category2:
+        # Label displayed in the select menu
+        menuLabel: 'Gneral Ticket'
+        # Description explaining the purpose of this category
+        menuDescription: 'Click on this option to open a General Ticket'
+        # Emoji associated with this category (leave empty if none)
+        menuEmoji: '🔧'
+
+        # ================================
+        # Embed description for this category
+        embedDescription: 'Welcome to Gneral Ticket! You have a question'
+
+    # Category 3
+    category3:
+        # Label displayed in the select menu
+        menuLabel: 'Premium'
+        # Description explaining the purpose of this category
+        menuDescription: 'Click on this option to open a Premium Ticket'
+        # Emoji associated with this category (leave empty if none)
+        menuEmoji: '💳'
+        
+        # ================================
+        # Embed description for this category
+        embedDescription: 'Welcome to Premium! Have any questions or issues regarding billing or payments? Let us know.'
+
+# ==============================================
+# Embeds Locale
+# ==============================================
+
+embeds:
+  #PanelEMbed
+  panelEmbed:
+      color: "#0099FF"
+      title: "Tickets"
+      description: "To create a support ticket, please select one of the options below based on the assistance you require."
+      timestamp: true
+      URL: ""
+      image: "https://cdn.discordapp.com/attachments/1109764526552915988/1136666715078533303/image.png?ex=6647695f&is=664617df&hm=ec6a3e7de621daf0813e7a70c6ec7b2c9741bad8450172d356f85f28273610b2&"
+      thumbnail: ""
+      footer:
+        text: "Tickets"
+        iconURL: ""
+      author:
+        name: ""
+        iconURL: ""
+        url: ""
